@@ -8,7 +8,7 @@ Home page:![1](https://i.postimg.cc/R0K5yb4t/29f663c9-2d28-44e3-a9e4-57d70699ed4
 Predicated Result:![1](https://i.postimg.cc/Twndj3pZ/7fee5f02-e12f-4afd-bb84-7488e89b4992.jpg)
 
 ##Pytorch code debugging:
-From the code syntax error is might less but i am not familar with pythorch ,I worked in Tensorflow framwork, It hard to solve, but in Future We learn Pytorch. Hereby finding some error upto our knowledge.
+From the code syntax error is might less but i am not familar with pythorch ,I worked in Tensorflow framwork, It hard to solve, but in Future We learn Pytorch. Hereby finded some error upto our knowledge.
 If there is more time we will solve.
 
 In line 49 it rise the exception becomes it value is 0 intger to pass as float 
