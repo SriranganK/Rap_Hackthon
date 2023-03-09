@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-vs-bowling-alley-and-arcade-flaticons-lineal-color-flat-icons.png">
+    <title>Rap Assignment</title>
+</head>
+<body>
+
+    <header>
+        
+        <div class="navbar navbar-dark bg-dark shadow-sm" style="border-radius: 12px;">
+          <div class="container">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+              <strong>RAP Hackthon ML Assignment</strong>
+              <p>Done by Venkat PR and Srirangan K</p>
+            </a>
+            <ul class="nav justify-content-end" style="padding-left:400px;">
+              <li class="nav-item">
+                <a class="nav-link" style="color:white;" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" style="color:white;"aria-current="page" href="/about">About Project</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color:white;" href="/aboutus">About US</a>
+              </li>
+             
+            </ul>
+            <div class = 'logo'>
+                <img src="https://i.postimg.cc/LsKJ8FKs/logo-3f4ea69e289617b32787803e454771e7.png" alt="Girl in a jacket" width="50" height="50">
+            </div>
+          </div>
+        </div>
+      </header>
+
+      
+      
+<div class="wrapper">
+  <div class="container1">
+    <h1>Predicted Value</h1>
+    <div class="upload-container">
+      <div class="border-container">
+        <div class="icons fa-4x">
+          <i class="fas fa-file-image" data-fa-transform="shrink-3 down-2 left-6 rotate--45"></i>
+          <i class="fas fa-file-alt" data-fa-transform="shrink-2 up-4"></i>
+          <i class="fas fa-file-pdf" data-fa-transform="shrink-3 down-2 right-6 rotate-45"></i>
+        </div>
+        <!--<input type="file" id="file-upload">-->
+       
+          <p>Predicted Result :</p>
+          <h1>{{prediction}}</h1>
+          <p>Probability of {{prediction}} :</p>
+          <h1>{{probability}}</h1>
+
+          
+          <br><br>
+          <a href="/" ><label class="btn btn-upload mb-3" for="upload_image_background">Back to Home</label></a>
+         </div>
+          
+
+
+<svg style="display:none">
+  <defs>
+    <symbol id="icon-imageUpload" clip-rule="evenodd" viewBox="0 0 96 96">
+      <path d="M47 6a21 21 0 0 0-12.3 3.8c-2.7 2.1-4.4 5-4.7 7.1-5.8 1.2-10.3 5.6-10.3 10.6 0 6 5.8 11 13 11h12.6V22.7l-7.1 6.8c-.4.3-.9.5-1.4.5-1 0-2-.8-2-1.7 0-.4.3-.9.6-1.2l10.3-8.8c.3-.4.8-.6 1.3-.6.6 0 1 .2 1.4.6l10.2 8.8c.4.3.6.8.6 1.2 0 1-.9 1.7-2 1.7-.5 0-1-.2-1.3-.5l-7.2-6.8v15.6h14.4c6.1 0 11.2-4.1 11.2-9.4 0-5-4-8.8-9.5-9.4C63.8 11.8 56 5.8 47 6Zm-1.7 42.7V38.4h3.4v10.3c0 .8-.7 1.5-1.7 1.5s-1.7-.7-1.7-1.5Z M27 49c-4 0-7 2-7 6v29c0 3 3 6 6 6h42c3 0 6-3 6-6V55c0-4-3-6-7-6H28Zm41 3c1 0 3 1 3 3v19l-13-6a2 2 0 0 0-2 0L44 79l-10-5a2 2 0 0 0-2 0l-9 7V55c0-2 2-3 4-3h41Z M40 62c0 2-2 4-5 4s-5-2-5-4 2-4 5-4 5 2 5 4Z"/>
+    </symbol>
+  </defs>
+</svg>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<style>
+ * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+  .container1 {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    /*border: 0.5px solid rgba(130, 130, 130, 0.25);*/
+    /*box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 
+                0 0 0 1px rgba(0, 0, 0, 0.1);*/
+  }
+.wrapper {
+    margin: auto;
+    max-width: 640px;
+    padding-top: 60px;
+    text-align: center;
+  }
+  
+    h1 {
+    color: #130f40;
+    font-family: 'Varela Round', sans-serif;
+    letter-spacing: -.5px;
+    font-weight: 700;
+    padding-bottom: 10px;
+  }
+  
+  .upload-container {
+    background-color: rgb(239, 239, 239);
+    border-radius: 6px;
+    padding: 10px;
+  }
+ 
+  .border-container {
+    border: 5px dashed rgba(198, 198, 198, 0.65);
+  /*   border-radius: 4px; */
+    padding: 20px;
+  }
+  
+  .border-container p {
+    color: #130f40;
+    font-weight: 600;
+    font-size: 1.1em;
+    letter-spacing: -1px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    opacity: 0.65;
+  }
+
+
+.container p {
+margin-bottom: -3rem;
+margin-left: -18rem;
+font-size: medium;
+padding-bottom: 20px;
+}
+.container{
+    height:60px;
+}
+.container strong{
+    padding-bottom: 20px;
+}
+/* Bootstrap 5 CSS and icons included */
+:root {
+  --colorPrimaryNormal: #000000;
+  --colorPrimaryDark: #000000;
+  --colorPrimaryGlare: #000000;
+  --colorPrimaryHalf: #000000;
+  --colorPrimaryQuarter: #bfecee;
+  --colorPrimaryEighth: #dff5f7;
+  --colorPrimaryPale: #f3f5f7;
+  --colorPrimarySeparator: #f3f5f7;
+  --colorPrimaryOutline: #dff5f7;
+  --colorButtonNormal: #000000;
+  --colorButtonHover: #000000;
+  --colorLinkNormal: #000000;
+  --colorLinkHover: #000000;
+}
+
+body {
+  margin: 24px;
+}
+
+
+.upload_dropZone {
+  color: #0f3c4b;
+  background-color: var(--colorPrimaryPale, #c8dadf);
+  outline: 2px dashed var(--colorPrimaryHalf, #c1ddef);
+  outline-offset: -12px;
+  transition:
+    outline-offset 0.2s ease-out,
+    outline-color 0.3s ease-in-out,
+    background-color 0.2s ease-out;
+}
+.upload_dropZone.highlight {
+  outline-offset: -4px;
+  outline-color: var(--colorPrimaryNormal, #0576bd);
+  background-color: var(--colorPrimaryEighth, #c8dadf);
+}
+.upload_svg {
+  fill: var(--colorPrimaryNormal, #0576bd);
+}
+.btn-upload {
+  color: #fff;
+  background-color: var(--colorPrimaryNormal);
+}
+.btn-upload:hover,
+.btn-upload:focus {
+  color: #fff;
+  background-color: var(--colorPrimaryGlare);
+}
+.upload_img {
+  width: calc(33.333% - (2rem / 3));
+  object-fit: contain;
+}
+
+body {
+  color: #1a1a1a;
+  font-family: "Poppins", sans-serif;
+  background: hsla(141, 54%, 86%, 1);
+
+  background: linear-gradient(
+    to right,
+    hsla(141, 54%, 86%, 1) 0%,
+    hsla(333, 73%, 85%, 1) 50%,
+    hsla(211, 58%, 79%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    to right,
+    hsla(141, 54%, 86%, 1) 0%,
+    hsla(333, 73%, 85%, 1) 50%,
+    hsla(211, 58%, 79%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    to right,
+    hsla(141, 54%, 86%, 1) 0%,
+    hsla(333, 73%, 85%, 1) 50%,
+    hsla(211, 58%, 79%, 1) 100%
+  );
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+figure.snip0056 {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 380px;
+  max-width: 480px;
+  width: 100%;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #000000;
+  
+}
+figure.snip0056 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  
+}
+figure.snip0056 > img {
+  width: 50%;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  -webkit-transform: scale(1.6);
+  transform: scale(1.6);
+  position: relative;
+  float: right;
+  right: -15%;
+  z-index: 1;
+}
+figure.snip0056 figcaption {
+  padding: 20px 30px 20px 20px;
+  position: absolute;
+  left: 0;
+  width: 50%;
+}
+figure.snip0056 figcaption h2,
+figure.snip0056 figcaption p {
+  margin: 0;
+  text-align: left;
+  padding: 10px 0;
+  width: 100%;
+}
+figure.snip0056 figcaption h2 {
+  font-size: 1.3em;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+figure.snip0056 figcaption h2 span {
+  font-weight: 800;
+}
+figure.snip0056 figcaption p {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+figure.snip0056 figcaption .icons {
+  width: 100%;
+  text-align: left;
+}
+figure.snip0056 figcaption .icons i {
+  font-size: 26px;
+  padding: 5px;
+  top: 50%;
+  color: #000000;
+}
+figure.snip0056 figcaption a {
+  opacity: 0.3;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+figure.snip0056 figcaption a:hover {
+  opacity: 0.8;
+}
+figure.snip0056 .position {
+  width: 100%;
+  text-align: left;
+  padding: 15px 30px;
+  font-size: 0.9em;
+  opacity: 1;
+  font-style: italic;
+  color: #ffffff;
+  background: #000000;
+  clear: both;
+}
+figure.snip0056.blue .position {
+  background: #20638f;
+}
+figure.snip0056.red .position {
+  background: #962d22;
+}
+figure.snip0056.yellow .position {
+  background: #bf6516;
+}
+figure.snip0056:hover > img,
+figure.snip0056.hover > img {
+  right: -12%;
+}
+
+</style>
+
+<script>
+
+    
+console.clear();
+('use strict');
+
+
+
+(function () {
+
+  'use strict';
+  const preventDefaults = event => {
+    event.preventDefault();
+    event.stopPropagation();
+  };
+
+  const highlight = event =>
+    event.target.classList.add('highlight');
+  
+  const unhighlight = event =>
+    event.target.classList.remove('highlight');
+
+  const getInputAndGalleryRefs = element => {
+    const zone = element.closest('.upload_dropZone') || false;
+    const gallery = zone.querySelector('.upload_gallery') || false;
+    const input = zone.querySelector('input[type="file"]') || false;
+    return {input: input, gallery: gallery};
+  }
+
+  const handleDrop = event => {
+    const dataRefs = getInputAndGalleryRefs(event.target);
+    dataRefs.files = event.dataTransfer.files;
+    handleFiles(dataRefs);
+  }
+
+
+  const eventHandlers = zone => {
+
+    const dataRefs = getInputAndGalleryRefs(zone);
+    if (!dataRefs.input) return;
+
+    
+    ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(event => {
+      zone.addEventListener(event, preventDefaults, false);
+      document.body.addEventListener(event, preventDefaults, false);
+    });
+
+    
+    ;['dragenter', 'dragover'].forEach(event => {
+      zone.addEventListener(event, highlight, false);
+    });
+    ;['dragleave', 'drop'].forEach(event => {
+      zone.addEventListener(event, unhighlight, false);
+    });
+
+    
+    zone.addEventListener('drop', handleDrop, false);
+
+    
+    dataRefs.input.addEventListener('change', event => {
+      dataRefs.files = event.target.files;
+      handleFiles(dataRefs);
+    }, false);
+
+  }
+
+  const dropZones = document.querySelectorAll('.upload_dropZone');
+  for (const zone of dropZones) {
+    eventHandlers(zone);
+  }
+
+
+  const isImageFile = file => 
+    ['image/jpeg', 'image/png', 'image/svg+xml'].includes(file.type);
+
+
+  function previewFiles(dataRefs) {
+    if (!dataRefs.gallery) return;
+    for (const file of dataRefs.files) {
+      let reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onloadend = function() {
+        let img = document.createElement('img');
+        img.className = 'upload_img mt-2';
+        img.setAttribute('alt', file.name);
+        img.src = reader.result;
+        dataRefs.gallery.appendChild(img);
+      }
+    }
+  }
+
+
+  const imageUpload = dataRefs => {
+
+    if (!dataRefs.files || !dataRefs.input) return;
+
+    const url = dataRefs.input.getAttribute('data-post-url');
+    if (!url) return;
+
+    const name = dataRefs.input.getAttribute('data-post-name');
+    if (!name) return;
+
+    const formData = new FormData();
+    formData.append(name, dataRefs.files);
+
+    fetch(url, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('posted: ', data);
+      if (data.success === true) {
+        previewFiles(dataRefs);
+      } else {
+        console.log('URL: ', url, '  name: ', name)
+      }
+    })
+    .catch(error => {
+      console.error('errored: ', error);
+    });
+  }
+
+  const handleFiles = dataRefs => {
+
+    let files = [...dataRefs.files];
+    files = files.filter(item => {
+      if (!isImageFile(item)) {
+        console.log('Not an image, ', item.type);
+      }
+      return isImageFile(item) ? item : null;
+    });
+
+    if (!files.length) return;
+    dataRefs.files = files;
+
+    previewFiles(dataRefs);
+    imageUpload(dataRefs);
+  }
+
+})();
+</script>
